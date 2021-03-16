@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div class="bg-gray-50 w-screen h-screen flex flex-col items-center justify-center">
+
+        <!-- logout button -->
+        <button id="logout-button" type="button"
+            class="text-purple-600 text-3xl hover:text-red-500 w-5 h-5 flex justify-center items-center mb-2 self-center   rounded rounded-full">X
+        </button>
+        <div id="edit-form" class="edit-form-wrapper  px-10 py-5 rounded shadow-inner-2xl  ">
+
+            <!-- show and edit form -->
+            <form action="/edit" method="POST" class="flex flex-col space-y-0 ">
+
+                <label for="user-id">کد کاربری: </label>
+                <input type="text" disabled name="user-id" placeholder="user-id" value="<%= user.id %> "
+                    class="border shadow-inner p-2 placeholder-gray-300 focus:placeholder-gray-500">
+                <br>
+                <label for="username">نام کاربری: </label>
+                <input type="text" disabled name="username" placeholder="username" value="<%= user.username %>"
+                    class="border shadow-inner p-2 placeholder-gray-300 focus:placeholder-gray-500">
+                <p class="error-text m-0 opacity-0 text-red-500">لطفا این گزینه را پر کنید</p>
+                <label for="password">رمز عبور: </label>
+                <input type="text" disabled name="password" placeholder="password" value="<%= user.password %>"
+                    class="border shadow-inner p-2 placeholder-gray-300 focus:placeholder-gray-500">
+                <p class="error-text m-0 mb-5 opacity-0 text-red-500">لطفا این گزینه را پر کنید</p>
+                <label for="email">ایمیل: </label>
+                <input type="text" disabled name="email" placeholder="email" value="<%= user.email %>"
+                    class="border shadow-inner p-2 placeholder-gray-300 focus:placeholder-gray-500">
+                <p class="error-text m-0 mb-5 opacity-0 text-red-500">لطفا این گزینه را پر کنید</p>
+                <select disabled name="gender" id="select-gender" class="py-2 border shadow-inner">
+                    <option value="">جنسیت</option>
+                    <option <% if(user.gender==="male" ){%> selected <%}%> value="male">مرد</option>
+                    <option <% if(user.gender==="female" ){%> selected <%}%> value="female">زن</option>
+                </select>
+                <p class="error-text m-0 mb-5 opacity-0 text-red-500">لطفا این گزینه را پر کنید</p>
+                <button id="edit-button" type="button" class="bg-blue-600 text-white p-2 rounded-lg">ویرایش
+                    اطلاعات</button>
+                <div class="edit-buttons-wrapper flex flex-row w-full h-50">
+                    <button id="save-button" type="button" class=" hidden bg-green-600 text-white p-2 rounded-lg">ذخیره
+                        تغییرات</button>
+                    <button id="exit-button" type="button"
+                        class="hidden bg-black text-white p-2 mr-2 rounded-lg">انصراف</button>
+                </div>
+                <p class="response-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/profile.js"></script>
+</body>
+
+</html>

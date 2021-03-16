@@ -1,0 +1,27 @@
+.form-wrapper {
+    width: 23rem;
+    height: 400px;
+}
+.signup-form-wrapper, .edit-form-wrapper{
+    
+    width: 30rem;
+    height: 550px;
+}
+
+button {
+    margin-top: 15px !important;
+}
+
+label {
+    margin-bottom: 5px !important;
+}
+
+.btn-show-signup,
+.btn-show-login {
+    cursor: pointer;
+}
+
+.response-message {
+    text-align: center;
+    margin-top: 30px !important;
+}

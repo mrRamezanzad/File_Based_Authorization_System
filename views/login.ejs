@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login </title>
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div class="bg-gray-50 w-full h-screen flex flex-col items-center justify-center">
+
+        <!-- login form -->
+        <div id="login-form" class="form-wrapper bg-white px-12 py-10 rounded shadow-inner-2xl hover:shadow-lg">
+            <form action="/login" method="POST" class="flex flex-col space-y-0 ">
+                <label for="username">نام کاربری: </label>
+                <input id="username-value" type="text" name="username" placeholder="username"
+                    class="border shadow-inner p-2 placeholder-gray-300 focus:placeholder-gray-500">
+                <p class="error-text m-0 opacity-0 text-red-500 ">لطفا این گزینه را پر کنید</p>
+                <label for="password">رمز عبور: </label>
+                <input id="password-value" type="text" name="password" placeholder="password"
+                    class="border shadow-inner p-2 placeholder-gray-300 focus:placeholder-gray-500">
+                <p class="error-text m-0 mb-5 opacity-0 text-red-500 ">لطفا این گزینه را پر کنید</p>
+
+                <button id="login-button" type="submit" class="bg-indigo-600 text-white p-2 rounded-lg">ورود</button>
+                <p class="response-message opacity-100"></p>
+            </form>
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div class="bg-gray-50 w-full h-screen flex flex-col items-center justify-center">
+
+        <!-- signup form -->
+        <div id="signup-form"
+            class="signup-form-wrapper bg-white px-10 py-10 rounded shadow-inner-2xl hover:shadow-lg ">
+            <form action="/signup" method="POST" class="flex flex-col space-y-0 ">
+                <label for="username">نام کاربری: </label>
+                <input type="text" name="username" placeholder="username"
+                    class="border shadow-inner p-2 placeholder-gray-300 focus:placeholder-gray-500">
+                <p class="error-text m-0 opacity-0 text-red-500">لطفا این گزینه را پر کنید</p>
+                <label for="password">رمز عبور: </label>
+                <input type="text" name="password" placeholder="password"
+                    class="border shadow-inner p-2 placeholder-gray-300 focus:placeholder-gray-500">
+                <p class="error-text m-0 mb-5 opacity-0 text-red-500">لطفا این گزینه را پر کنید</p>
+                <label for="email">ایمیل: </label>
+                <input type="text" name="email" placeholder="email"
+                    class="border shadow-inner p-2 placeholder-gray-300 focus:placeholder-gray-500">
+                <p class="error-text m-0 mb-5 opacity-0 text-red-500">لطفا این گزینه را پر کنید</p>
+                <select name="gender" id="select-gender" class="py-2 border shadow-inner">
+                    <option value="">جنسیت</option>
+                    <option value="male">مرد</option>
+                    <option value="female">زن</option>
+                </select>
+                <p class="error-text m-0 mb-5 opacity-0 text-red-500">لطفا این گزینه را پر کنید</p>
+                <button id="signup-button" type="submit" class="bg-pink-600 text-white p-2 rounded-lg">ثبت نام</button>
+                <p class="response-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/signup.js"></script>
+</body>
+
+</html>
